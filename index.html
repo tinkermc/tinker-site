@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tinker MC </title>
+  <meta name="description"
+    content="Tinker Dash is a free desktop app for running Minecraft servers on your own hardware. Live console, players, world tools and one-command setup. No command line needed." />
+  <link rel="icon" href="assets/images/tinker/wrench.png" />
+  <link rel="stylesheet" href="./src/css/tailwind.css" />
+</head>
+
+<body class="bg-ink text-white antialiased selection:bg-tinker/30">
+  <!-- ====== Nav -->
+  <header id="top" class="fixed inset-x-0 top-0 z-50 border-b border-line/0 transition-colors" data-nav>
+    <div class="mx-auto flex h-16 max-w-[1180px] items-center justify-between px-5">
+      <a href="#top" class="flex items-center gap-2 text-xl font-extrabold tracking-tight">
+        <img src="assets/images/tinker/wrench.png" alt="" class="h-6 w-6" />
+        Tinker
+      </a>
+
+      <nav class="hidden items-center gap-8 text-sm font-medium text-mute md:flex">
+        <a href="#features" class="hover:text-white">Features</a>
+        <a href="#how" class="hover:text-white">How it works</a>
+        <a href="#plus" class="hover:text-white">Plus</a>
+        <a href="#team" class="hover:text-white">Team</a>
+        <a href="#faq" class="hover:text-white">FAQ</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://discord.gg/4uEMPGrCET" target="_blank" rel="noopener noreferrer"
+          class="hidden rounded-lg border border-[#0173D4] bg-gradient-to-b from-[#00c6ff] to-[#0072ff] px-4 py-2 text-sm font-bold text-white shadow-[0_8px_24px_-6px_rgba(1,115,212,0.5)] transition sm:inline-flex">
+          Apply for Beta
+        </a>
+        <button type="button"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-line md:hidden"
+          aria-label="Open menu" aria-expanded="false" data-menu-button>
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="hidden border-t border-line bg-ink/95 px-5 py-4 text-base font-medium backdrop-blur md:hidden"
+      data-menu>
+      <a href="#features" class="block py-2 text-mute hover:text-white">Features</a>
+      <a href="#how" class="block py-2 text-mute hover:text-white">How it works</a>
+      <a href="#plus" class="block py-2 text-mute hover:text-white">Plus</a>
+      <a href="#team" class="block py-2 text-mute hover:text-white">Team</a>
+      <a href="#faq" class="block py-2 text-mute hover:text-white">FAQ</a>
+      <a href="https://discord.gg/4uEMPGrCET" target="_blank" rel="noopener noreferrer"
+        class="mt-2 block rounded-lg border border-[#0173D4] bg-gradient-to-b from-[#00c6ff] to-[#0072ff] px-4 py-2 text-center font-bold text-white shadow-[0_8px_24px_-6px_rgba(1,115,212,0.5)]">Apply
+        for Beta</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ====== Hero -->
+    <section class="relative overflow-hidden pt-36 pb-20 sm:pt-44">
+      <div class="tk-grid pointer-events-none absolute inset-0"></div>
+      <div
+        class="pointer-events-none absolute top-24 left-1/2 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-tinker/15 blur-[120px]">
+      </div>
+
+      <div class="relative mx-auto max-w-[1180px] px-5 text-center">
+        <h1
+          class="mx-auto max-w-[1000px] text-4xl leading-[1.05] font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
+          Run your Minecraft servers
+          <span class="text-tinker">from your desktop.</span>
+        </h1>
+        <p class="mx-auto mt-6 max-w-[620px] text-lg leading-relaxed text-mute">
+          Turn an old PC into a server box. Tinker Dash gives you a live console, player controls and world tools
+          in one app, so you never have to SSH in or edit config files by hand.
+        </p>
+
+        <div id="download" class="mt-9 flex flex-wrap items-center justify-center gap-3 scroll-mt-28">
+          <a href="https://discord.gg/4uEMPGrCET" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-2.5 rounded-xl border border-[#0173D4] bg-gradient-to-b from-[#00c6ff] to-[#0072ff] px-6 py-3.5 text-base font-bold text-white shadow-[0_8px_30px_-6px_rgba(1,115,212,0.5)] transition">
+            Apply for Beta Testing
+          </a>
+          <a href="#how"
+            class="inline-flex items-center gap-2 rounded-xl border border-line bg-ink-2 px-6 py-3.5 text-base font-semibold text-white transition hover:border-mute/50">
+            Documentation
+          </a>
+        </div>
+
+        <div class="relative mx-auto mt-16 max-w-[1040px]">
+          <div class="rounded-2xl border border-line bg-ink-2 p-2 shadow-[0_40px_120px_-30px_#22c55e40]">
+            <div class="flex items-center gap-1.5 px-3 pt-1.5 pb-2.5">
+              <span class="h-2.5 w-2.5 rounded-full bg-line"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-line"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-line"></span>
+            </div>
+            <img src="assets/images/tinker/console.png" alt="The Tinker Dash console showing a live NeoForge server log"
+              class="aspect-[16/10] w-full rounded-xl border border-line object-cover object-top" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Supports strip -->
+    <section class="border-y border-line bg-ink-2/60">
+      <div
+        class="mx-auto flex max-w-[1180px] flex-wrap items-center justify-center gap-x-10 gap-y-3 px-5 py-6 font-mono text-sm text-mute">
+        <span class="text-white/80">Works with</span>
+        <span>Vanilla</span>
+        <span>Paper</span>
+        <span>Fabric</span>
+        <span>NeoForge</span>
+        <span class="text-line">|</span>
+        <span>Import from Crafty Controller</span>
+      </div>
+    </section>
+
+    <!-- ====== Features -->
+    <section id="features" class="scroll-mt-16 py-24">
+      <div class="mx-auto max-w-[1180px] px-5">
+        <div class="max-w-[640px]">
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-5xl">Manage the server.<br />Play the game.</h2>
+          <p class="mt-4 max-w-[560px] text-lg text-mute">Tinker puts your console, players, worlds and settings in one
+            place. No SSH or config-file editing required.</p>
+        </div>
+
+        <div class="mt-14 grid gap-4 lg:grid-cols-3">
+          <!-- Console (wide) -->
+          <article class="rounded-2xl border border-line bg-ink-2 p-7 lg:col-span-2">
+            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-tinker/15 text-tinker">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m5 8 4 4-4 4M12 16h7" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-xl font-bold">Live console</h3>
+            <p class="mt-2 max-w-[520px] text-mute">
+              Watch your server's log as it happens, colour-coded by type. Filter warnings and errors, search,
+              copy or download it. Re-run past commands and save your own one-click quick commands.
+            </p>
+            <div class="mt-6 overflow-hidden rounded-xl border border-line bg-ink p-4 font-mono text-[13px] leading-6">
+              <p><span class="text-mute">[14:02:16]</span> <span class="text-tinker">[Server/INFO]</span> Done (12.4s)!
+                For help, type "help"</p>
+              <p><span class="text-mute">[14:05:42]</span> <span class="text-tinker">[Server/INFO]</span> CanBeGold
+                joined the game</p>
+              <p class="text-amber-300"><span class="text-mute">[14:12:37]</span> [Server/WARN] Can't keep up! Running
+                2034ms behind</p>
+              <p class="mt-2 text-white"><span class="text-tinker">&gt;</span> save-all<span
+                  class="ml-0.5 inline-block h-4 w-2 translate-y-0.5 animate-pulse bg-tinker"></span></p>
+            </div>
+          </article>
+
+          <!-- Players -->
+          <article class="rounded-2xl border border-line bg-ink-2 p-7">
+            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-tinker/15 text-tinker">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="8" r="3.5" />
+                <path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M21.5 20a6.5 6.5 0 0 0-4-6" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-xl font-bold">Players</h3>
+            <p class="mt-2 text-mute">See who's online. Kick, ban and unban, give operator, manage the whitelist, and
+              keep private notes on each player.</p>
+            <ul class="mt-6 space-y-2 text-sm">
+              <li class="flex items-center justify-between rounded-lg border border-tinker/30 bg-tinker/5 px-3 py-2">
+                <span class="font-semibold">CanBeGold</span><span class="font-mono text-xs text-tinker-soft">● online ·
+                  OP</span>
+              </li>
+              <li class="flex items-center justify-between rounded-lg border border-line px-3 py-2"><span
+                  class="font-semibold">Steve_Builds</span><span class="font-mono text-xs text-tinker-soft">●
+                  online</span></li>
+              <li class="flex items-center justify-between rounded-lg border border-red-500/30 bg-red-500/5 px-3 py-2">
+                <span class="font-semibold">Griefer42</span><span class="font-mono text-xs text-red-400">● banned</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Create & import -->
+          <article class="rounded-2xl border border-line bg-ink-2 p-7">
+            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-tinker/15 text-tinker">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round">
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-xl font-bold">Create or import servers</h3>
+            <p class="mt-2 text-mute">Pick Vanilla, Paper or Fabric and a version, and Tinker downloads and sets it up.
+              Already using Crafty Controller? Bring your servers over, and the originals stay untouched.</p>
+          </article>
+
+          <!-- World -->
+          <article class="rounded-2xl border border-line bg-ink-2 p-7">
+            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-tinker/15 text-tinker">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-xl font-bold">World tools</h3>
+            <p class="mt-2 text-mute">Copy your seed, set the world border, and pre-generate chunks with Chunky. You can
+              pause and resume it and watch live progress.</p>
+          </article>
+
+          <!-- Safe -->
+          <article class="rounded-2xl border border-line bg-ink-2 p-7">
+            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-tinker/15 text-tinker">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-xl font-bold">Never lose a world</h3>
+            <p class="mt-2 text-mute">Start, stop and restart in one click. Tinker warns you when players are online and
+              always saves before stopping, even when the server PC shuts down.</p>
+          </article>
+        </div>
+
+        <p class="mt-6 text-sm text-mute">Next: Modrinth modpacks, a file editor and user roles.</p>
+      </div>
+    </section>
+
+    <!-- ====== Screenshots -->
+    <section class="pb-24">
+      <div class="mx-auto grid max-w-[1180px] gap-6 px-5 md:grid-cols-2">
+        <figure>
+          <div class="overflow-hidden rounded-2xl border border-line bg-ink-2 p-2">
+            <img src="assets/images/tinker/server.png"
+              alt="The Server tab with start, stop and restart controls and server settings"
+              class="aspect-[5/4] w-full rounded-xl object-cover object-top" loading="lazy" />
+          </div>
+          <figcaption class="mt-3 text-sm text-mute"><span class="font-semibold text-white">Server.</span> Live CPU,
+            memory, players and uptime, plus your most-used settings.</figcaption>
+        </figure>
+        <figure>
+          <div class="overflow-hidden rounded-2xl border border-line bg-ink-2 p-2">
+            <img src="assets/images/tinker/players.png"
+              alt="The Players tab showing online players and moderation tools"
+              class="aspect-[5/4] w-full rounded-xl object-cover object-top" loading="lazy" />
+          </div>
+          <figcaption class="mt-3 text-sm text-mute"><span class="font-semibold text-white">Players.</span> Everyone
+            who's joined, their status, and moderation in one click.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ====== How it works -->
+    <section id="how" class="scroll-mt-16 border-y border-line bg-ink-2/50 py-24">
+      <div class="mx-auto max-w-[1180px] px-5">
+        <div class="max-w-[640px]">
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-5xl">Two small programs. Three steps.</h2>
+          <p class="mt-4 text-lg text-mute">
+            <span class="text-white">Tinker Dash</span> is the app on your PC where you click and manage.
+            <span class="text-white">Tinker Agent</span> runs on your server PC and does the work. One Agent can run
+            many servers.
+          </p>
+        </div>
+
+        <!-- Diagram -->
+        <div
+          class="mt-12 grid items-center gap-4 rounded-2xl border border-line bg-ink p-6 md:grid-cols-[1fr_auto_1fr]">
+          <div class="rounded-xl border border-line bg-ink-2 p-5">
+            <p class="font-mono text-xs text-mute">Your PC</p>
+            <p class="mt-1 text-lg font-bold">Tinker Dash</p>
+            <p class="mt-1 text-sm text-mute">Console, players, world, settings</p>
+          </div>
+          <div class="flex flex-col items-center px-4 font-mono text-xs text-tinker">
+            <span class="hidden md:inline">───── commands ────▶</span>
+            <span class="hidden md:inline">◀──── live data ─────</span>
+            <span class="md:hidden">▼ commands · live data ▲</span>
+            <span class="mt-1 text-mute">connection via gRPC</span>
+          </div>
+          <div class="rounded-xl border border-line bg-ink-2 p-5">
+            <p class="font-mono text-xs text-mute">Server PC</p>
+            <p class="mt-1 text-lg font-bold">Tinker Agent</p>
+            <p class="mt-1 text-sm text-mute">Runs your Minecraft servers 24/7</p>
+          </div>
+        </div>
+
+        <ol class="mt-6 grid gap-4 md:grid-cols-3">
+          <li class="rounded-2xl border border-line bg-ink p-7">
+            <span class="font-mono text-sm text-tinker">01</span>
+            <h3 class="mt-3 text-lg font-bold">Install the Agent</h3>
+            <p class="mt-2 text-sm text-mute">One command sets up the server PC: Java, the always-on service, the
+              firewall and a password. An old PC works great.</p>
+          </li>
+          <li class="rounded-2xl border border-line bg-ink p-7">
+            <span class="font-mono text-sm text-tinker">02</span>
+            <h3 class="mt-3 text-lg font-bold">Connect Dash</h3>
+            <p class="mt-2 text-sm text-mute">Open Tinker Dash and enter the address and token the installer gave you.
+              Dash remembers it and reconnects on its own.</p>
+          </li>
+          <li class="rounded-2xl border border-line bg-ink p-7">
+            <span class="font-mono text-sm text-tinker">03</span>
+            <h3 class="mt-3 text-lg font-bold">Press Start</h3>
+            <p class="mt-2 text-sm text-mute">Create a new server or import one you already have, accept the Minecraft
+              EULA, and you're live.</p>
+          </li>
+        </ol>
+
+        <p class="mt-6 text-sm text-mute">
+          Everything stays on your own network. Managing from somewhere else? Use Tailscale for free, or the Connection
+          Tunnel with Tinker Plus.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====== Plus / pricing -->
+    <section id="plus" class="scroll-mt-16 py-24">
+      <div class="mx-auto max-w-[1180px] px-5">
+        <div class="mx-auto max-w-[640px] text-center">
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-5xl">Free to run. Plus if you want more.</h2>
+          <p class="mt-4 text-lg text-mute">Everything above is free. Plus adds extras for running a server with
+            friends.</p>
+        </div>
+
+        <div class="mx-auto mt-14 grid max-w-[920px] gap-6 md:grid-cols-2">
+          <div class="rounded-2xl border border-line bg-ink-2 p-8">
+            <h3 class="text-lg font-bold">Tinker Basic</h3>
+            <p class="mt-4"><span class="text-5xl font-extrabold">$0</span><span class="text-mute"> forever</span></p>
+            <ul class="mt-8 space-y-3 text-sm">
+              <li class="flex gap-3"><span class="text-tinker">✓</span>Tinker Dash and Tinker Agent</li>
+              <li class="flex gap-3"><span class="text-tinker">✓</span>Unlimited servers</li>
+              <li class="flex gap-3"><span class="text-tinker">✓</span>Live console, players and world tools</li>
+              <li class="flex gap-3"><span class="text-tinker">✓</span>Create and import servers</li>
+              <li class="flex gap-3"><span class="text-tinker">✓</span>Up to 10 smart backups</li>
+            </ul>
+            <a href="https://discord.gg/4uEMPGrCET" target="_blank" rel="noopener noreferrer"
+              class="mt-8 block rounded-xl border border-[#0173D4] bg-gradient-to-b from-[#00c6ff] to-[#0072ff] py-3 text-center font-bold text-white shadow-[0_8px_24px_-6px_rgba(1,115,212,0.5)] transition">Apply
+              for Beta</a>
+          </div>
+
+          <div class="tk-plus-glow relative rounded-2xl bg-gradient-to-b from-plus/15 to-ink-2 p-8">
+            <span class="absolute top-6 right-6 rounded-full bg-plus/20 px-2.5 py-1 font-mono text-xs text-plus-soft">1
+              week free</span>
+            <h3 class="text-lg font-bold text-plus-soft">Tinker Plus</h3>
+            <p class="mt-4"><span class="text-5xl font-extrabold">$4.99</span><span class="text-mute"> / month</span>
+            </p>
+            <ul class="mt-8 space-y-3 text-sm">
+              <li class="flex gap-3"><span class="text-plus-soft">✓</span><span><b>Connection Tunnel:</b> manage from
+                  anywhere, no open ports</span></li>
+              <li class="flex gap-3"><span class="text-plus-soft">✓</span><span><b>Shared public user:</b> give friends
+                  access with one link</span></li>
+              <li class="flex gap-3"><span class="text-plus-soft">✓</span><span><b>5 GB cloud backups</b> and unlimited
+                  smart backups</span></li>
+              <li class="flex gap-3"><span class="text-plus-soft">✓</span><span><b>Modrinth shared instance:</b> no more
+                  sending .mrpack files</span></li>
+              <li class="flex gap-3">
+                <span class="text-plus-soft">✓</span>
+                <span>Plus role in our <a href="https://discord.gg/9G9H4HdtJx"
+                    class="text-blue-500 underline hover:text-blue-400">Discord</a></span>
+              </li>
+            </ul>
+            <span
+              class="mt-8 block cursor-not-allowed rounded-xl border border-plus/40 py-3 text-center font-bold text-plus-soft">Coming
+              soon</span>
+            <p class="mt-3 text-center text-xs text-mute">Cancel anytime. Your servers keep working on the free plan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FAQ -->
+    <section id="faq" class="scroll-mt-16 border-t border-line py-24">
+      <div class="mx-auto grid max-w-[1180px] gap-12 px-5 lg:grid-cols-[1fr_1.6fr]">
+        <div>
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-5xl">Questions</h2>
+          <p class="mt-4 text-mute">Anything else? Ask us on Discord.</p>
+        </div>
+
+        <div class="divide-y divide-line border-y border-line">
+          <details class="tk-faq group py-5">
+            <summary class="flex cursor-pointer items-center justify-between gap-6 text-lg font-semibold">What do I need
+              to run Tinker?<span class="tk-faq-icon text-2xl text-tinker transition-transform">+</span></summary>
+            <p class="mt-3 text-mute">A Windows PC for Tinker Dash, and a Linux machine for Tinker Agent. An old PC
+              works great. The Agent installs Java for you. Vanilla, Paper, Fabric and NeoForge servers are supported.
+            </p>
+          </details>
+          <details class="tk-faq py-5">
+            <summary class="flex cursor-pointer items-center justify-between gap-6 text-lg font-semibold">What's the
+              difference between Dash and Agent?<span
+                class="tk-faq-icon text-2xl text-tinker transition-transform">+</span></summary>
+            <p class="mt-3 text-mute">Tinker Dash is the app on your PC where you click, browse and manage. Tinker Agent
+              is a small program on your server PC that actually runs your Minecraft servers. Dash sends instructions
+              and the Agent does the work.</p>
+          </details>
+          <details class="tk-faq py-5">
+            <summary class="flex cursor-pointer items-center justify-between gap-6 text-lg font-semibold">How is this
+              different from other server panels?<span
+                class="tk-faq-icon text-2xl text-tinker transition-transform">+</span></summary>
+            <p class="mt-3 text-mute">Tinker is a desktop app, not a web panel you host and secure yourself. You get the
+              console, players, world tools and server setup in one place, without touching the command line.</p>
+          </details>
+          <details class="tk-faq py-5">
+            <summary class="flex cursor-pointer items-center justify-between gap-6 text-lg font-semibold">Is Tinker
+              free?<span class="tk-faq-icon text-2xl text-tinker transition-transform">+</span></summary>
+            <p class="mt-3 text-mute">Yes. Tinker Dash and Tinker Agent are free. Tinker Plus is an optional $4.99/month
+              upgrade with extras like the Connection Tunnel and cloud backups.</p>
+          </details>
+          <details class="tk-faq py-5">
+            <summary class="flex cursor-pointer items-center justify-between gap-6 text-lg font-semibold">Can I move my
+              servers from Crafty Controller?<span
+                class="tk-faq-icon text-2xl text-tinker transition-transform">+</span></summary>
+            <p class="mt-3 text-mute">Yes. The Agent finds Crafty's servers automatically, or you can point it at any
+              folder. It copies the server in and leaves the original untouched. Stop the server in Crafty first.</p>
+          </details>
+          <details class="tk-faq py-5">
+            <summary class="flex cursor-pointer items-center justify-between gap-6 text-lg font-semibold">How do I
+              manage my server when I'm away from home?<span
+                class="tk-faq-icon text-2xl text-tinker transition-transform">+</span></summary>
+            <p class="mt-3 text-mute">Use Tailscale for free, or turn on the Connection Tunnel with Tinker Plus. Never
+              open the Agent's port (7122) to the internet.</p>
+          </details>
+          <details class="tk-faq py-5">
+            <summary class="flex cursor-pointer items-center justify-between gap-6 text-lg font-semibold">Are you
+              affiliated with Mojang or Microsoft?<span
+                class="tk-faq-icon text-2xl text-tinker transition-transform">+</span></summary>
+            <p class="mt-3 text-mute">No. Tinker is an independent project and isn't affiliated with or endorsed by
+              Mojang or Microsoft.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Meet the team -->
+    <section id="team" class="scroll-mt-16 border-t border-line py-24">
+      <div class="mx-auto max-w-[1180px] px-5">
+        <div class="mx-auto max-w-[640px] text-center">
+          <p class="font-mono text-sm text-tinker">// meet the team</p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-5xl">The team behind Tinker</h2>
+          <p class="mt-4 text-lg text-mute">A small team making Minecraft servers easier to run.</p>
+        </div>
+
+        <div class="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3">
+          <article class="rounded-2xl border border-line bg-ink-2 p-5 text-center">
+            <img
+              class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-line bg-tinker/10 text-2xl font-extrabold text-tinker"
+              src="assets/images/team/theopfp.png">
+            <h3 class="mt-5 text-lg font-bold">Theo</h3>
+            <p class="mt-1 text-sm text-mute">Founder • Chief Developer</p>
+            <a href="mailto:theo@tinkermc.com"
+              class="mt-4 inline-flex items-center gap-2 rounded-lg border border-line px-3 py-2 text-sm font-medium text-mute transition hover:border-tinker hover:text-tinker focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tinker"
+              aria-label="Contact Theo">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 7 9 6 9-6" />
+              </svg>
+              Contact Theo
+            </a>
+          </article>
+
+          <article class="rounded-2xl border border-line bg-ink-2 p-5 text-center">
+            <img
+              class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-line bg-tinker/10 text-2xl font-extrabold text-tinker"
+              src="assets/images/team/joshpfp.webp">
+            <h3 class="mt-5 text-lg font-bold">Josh</h3>
+            <p class="mt-1 text-sm text-mute">QA Lead • Community Manager</p>
+            <a href="mailto:washy@tinkermc.com"
+              class="mt-4 inline-flex items-center gap-2 rounded-lg border border-line px-3 py-2 text-sm font-medium text-mute transition hover:border-tinker hover:text-tinker focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tinker"
+              aria-label="Contact Josh">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 7 9 6 9-6" />
+              </svg>
+              Contact Josh
+            </a>
+          </article>
+
+          <article class="rounded-2xl border border-line bg-ink-2 p-5 text-center">
+            <img
+              class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-line bg-tinker/10 text-2xl font-extrabold text-tinker"
+              src="assets/images/team/aidanpfp.png">
+            <h3 class="mt-5 text-lg font-bold">Aidan</h3>
+            <p class="mt-1 text-sm text-mute">UX/UI Designer • Community Manager</p>
+            <a href="mailto:acogan@tinkermc.com"
+              class="mt-4 inline-flex items-center gap-2 rounded-lg border border-line px-3 py-2 text-sm font-medium text-mute transition hover:border-tinker hover:text-tinker focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tinker"
+              aria-label="Contact Aidan">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 7 9 6 9-6" />
+              </svg>
+              Contact Aidan
+            </a>
+          </article>
+
+          <article class="rounded-2xl border border-line bg-ink-2 p-5 text-center">
+            <img
+              class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-line bg-tinker/10 text-2xl font-extrabold text-tinker"
+              src="assets/images/team/phillippfp.webp">
+            <h3 class="mt-5 text-lg font-bold">Phillip</h3>
+            <p class="mt-1 text-sm text-mute">Lead Advertisement</p>
+            <a href="mailto:phillip@tinkermc.com"
+              class="mt-4 inline-flex items-center gap-2 rounded-lg border border-line px-3 py-2 text-sm font-medium text-mute transition hover:border-tinker hover:text-tinker focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tinker"
+              aria-label="Contact Phillip">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 7 9 6 9-6" />
+              </svg>
+              Contact Phillip
+            </a>
+          </article>
+
+          <article class="rounded-2xl border border-line bg-ink-2 p-5 text-center">
+            <img
+              class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-line bg-tinker/10 text-2xl font-extrabold text-tinker"
+              src="assets/images/team/ryanpfp.jpg">
+            <h3 class="mt-5 text-lg font-bold">Ryan</h3>
+            <p class="mt-1 text-sm text-mute">Advertisement • QA Tester</p>
+            <a href="mailto:ryan@tinkermc.com"
+              class="mt-4 inline-flex items-center gap-2 rounded-lg border border-line px-3 py-2 text-sm font-medium text-mute transition hover:border-tinker hover:text-tinker focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tinker"
+              aria-label="Contact Ryan">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 7 9 6 9-6" />
+              </svg>
+              Contact Ryan
+            </a>
+          </article>
+
+          <article class="rounded-2xl border border-line bg-ink-2 p-5 text-center">
+            <img
+              class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-line bg-tinker/10 text-2xl font-extrabold text-tinker"
+              src="assets/images/team/tommypfp.webp">
+            <h3 class="mt-5 text-lg font-bold">Tommy</h3>
+            <p class="mt-1 text-sm text-mute">Lead Documentation</p>
+            <a href="mailto:tommy@tinkermc.com"
+              class="mt-4 inline-flex items-center gap-2 rounded-lg border border-line px-3 py-2 text-sm font-medium text-mute transition hover:border-tinker hover:text-tinker focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tinker"
+              aria-label="Contact Tommy">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 7 9 6 9-6" />
+              </svg>
+              Contact Tommy
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Footer -->
+    <footer class="border-t border-line">
+      <div
+        class="mx-auto flex max-w-[1180px] flex-col gap-6 px-5 py-10 text-sm text-mute md:flex-row md:items-center md:justify-between">
+        <div>
+          <a href="#top" class="flex items-center gap-2 text-base font-extrabold text-white">
+            <img src="assets/images/tinker/wrench.png" alt="" class="h-5 w-5" />Tinker
+          </a>
+        </div>
+        <div class="flex flex-wrap gap-6">
+          <a href="#features" class="hover:text-white">Features</a>
+          <a href="#plus" class="hover:text-white">Plus</a>
+          <a href="#team" class="hover:text-white">Team</a>
+          <a href="#faq" class="hover:text-white">FAQ</a>
+          <a href="https://discord.gg/9G9H4HdtJx" class="hover:text-white">Discord</a>
+          <a href="https://www.youtube.com/@tinker-core-mc" class="hover:text-white">YouTube</a>
+        </div>
+      </div>
+      <p class="border-t border-line px-5 py-5 text-center text-xs text-mute/70">
+        Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.
+      </p>
+    </footer>
+
+    <script>
+      // Mobile menu
+      const btn = document.querySelector("[data-menu-button]");
+      const menu = document.querySelector("[data-menu]");
+      btn.addEventListener("click", () => {
+        const open = menu.classList.toggle("hidden") === false;
+        btn.setAttribute("aria-expanded", String(open));
+      });
+      menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => menu.classList.add("hidden")));
+
+      // Solid nav once you scroll
+      const nav = document.querySelector("[data-nav]");
+      const onScroll = () => {
+        const s = window.scrollY > 8;
+        nav.classList.toggle("bg-ink/80", s);
+        nav.classList.toggle("backdrop-blur", s);
+        nav.classList.toggle("border-line", s);
+        nav.classList.toggle("border-line/0", !s);
+      };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+    </script>
+</body>
+
+</html>
