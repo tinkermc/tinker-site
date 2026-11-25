@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+:root,
+[data-vocs-theme="dark"] {
+  --vocs-font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --vocs-font-family-mono: "JetBrains Mono", ui-monospace, monospace;
+  --vocs-color-accent: #22c55e;
+
+  --vocs-color-gray1: #0a0b0d;
+  --vocs-color-gray2: #0a0b0d;
+  --vocs-color-gray3: #101317;
+  --vocs-color-gray4: #101317;
+  --vocs-color-gray5: #161a20;
+  --vocs-color-gray6: #232830;
+  --vocs-color-gray7: #9aa1ab;
+  --vocs-color-gray8: #aab1ba;
+  --vocs-color-gray9: #9aa1ab;
+  --vocs-color-gray10: #b8bec6;
+  --vocs-color-gray11: #d1d5db;
+  --vocs-color-gray12: #e5e7eb;
+  --vocs-color-gray13: #101317;
+  --vocs-color-gray14: #0a0b0d;
+
+  --background-color-primary: #0a0b0d;
+  --background-color-surface: #101317;
+  --background-color-surfaceMuted: #0a0b0d;
+  --background-color-surfaceTint: #161a20;
+  --text-color-primary: #e5e7eb;
+  --text-color-secondary: #9aa1ab;
+  --text-color-muted: #9aa1ab;
+  --text-color-heading: #ffffff;
+  --text-color-link: #ffffff;
+  --text-color-link-hover: #4ade80;
+  --border-color-primary: #232830;
+  --border-color-secondary: #232830;
+  --background-color-code-block: #101317;
+  --background-color-inline-code: #161a20;
+  --border-color-code-highlighted: #232830;
+  --border-color-tab-active: #22c55e;
+  --leading-base: 1.65;
+  --text-h1: 3.25rem;
+  --text-h2: 2.25rem;
+  --text-h3: 1.25rem;
+  --spacing-content-px: 3rem;
+  --spacing-content-py: 3rem;
+  --spacing-sidebar-px: 1.25rem;
+  --spacing-topNav-px: 1.25rem;
+}
+
+html,
+body {
+  background: #0a0b0d;
+  color: #e5e7eb;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 44px 44px;
+  background-position: center top;
+}
+
+::selection {
+  background: rgba(34, 197, 94, 0.28);
+  color: #ffffff;
+}
+
+/* Top navigation */
+[data-vocs] header {
+  background: rgba(10, 11, 13, 0.82);
+  border-bottom-color: #232830;
+  backdrop-filter: blur(14px);
+}
+
+/* Sidebar */
+[data-vocs] aside,
+[data-vocs] nav {
+  scrollbar-color: #232830 transparent;
+}
+
+/* Typography */
+[data-vocs] h1,
+[data-vocs] h2,
+[data-vocs] h3,
+[data-vocs] h4,
+[data-vocs] h5,
+[data-vocs] h6 {
+  color: #ffffff;
+  letter-spacing: -0.025em;
+  font-weight: 800;
+}
+
+[data-vocs] h1 {
+  line-height: 1.05;
+}
+
+[data-vocs] a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition:
+    color 150ms ease,
+    border-color 150ms ease,
+    background-color 150ms ease;
+}
+
+[data-vocs] a:hover {
+  color: #4ade80;
+}
+
+[data-vocs] p,
+[data-vocs] li {
+  color: #9aa1ab;
+}
+
+[data-vocs] strong,
+[data-vocs] th {
+  color: #ffffff;
+}
+
+/* Cards, callouts, tables, and code */
+[data-vocs] blockquote,
+[data-vocs] table,
+[data-vocs] pre,
+[data-vocs] code {
+  border-color: #232830;
+}
+
+[data-vocs] pre {
+  background: #101317 !important;
+  border: 1px solid #232830;
+  border-radius: 12px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.16);
+}
+
+[data-vocs] :not(pre) > code {
+  background: #161a20;
+  border: 1px solid #232830;
+  border-radius: 5px;
+  color: #4ade80;
+  padding: 0.15em 0.38em;
+}
+
+[data-vocs] table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+[data-vocs] th,
+[data-vocs] td {
+  border-color: #232830;
+}
+
+[data-vocs] th {
+  background: #101317;
+}
+
+[data-vocs] hr {
+  border-color: #232830;
+}
+
+/* Shared control and surface treatment */
+[data-vocs] button,
+[data-vocs] input,
+[data-vocs] textarea {
+  border-radius: 8px;
+}
+
+[data-vocs] button:focus-visible,
+[data-vocs] input:focus-visible,
+[data-vocs] textarea:focus-visible,
+[data-vocs] a:focus-visible {
+  outline: 2px solid #22c55e;
+  outline-offset: 3px;
+}
+
+@media (max-width: 960px) {
+  :root {
+    --text-h1: 2.25rem;
+    --text-h2: 1.75rem;
+    --spacing-content-px: 1.25rem;
+    --spacing-content-py: 2rem;
+  }
+
+  body {
+    background-size: 36px 36px;
+  }
+}

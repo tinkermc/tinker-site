@@ -1,0 +1,97 @@
+---
+title: Kitchen sink (formatting reference)
+description: Complete reference example of Vocs Markdown extensions, components, and syntax.
+layout: docs
+outline: true
+---
+
+import { Card, Cards, Link, Tab, Tabs } from 'vocs'
+
+# Vocs Kitchen Sink [All-in-one Markdown & MDX reference]
+
+This page demonstrates every built-in Vocs Markdown extension, directive, code block feature, and React component without external file dependencies.
+
+---
+
+## Inline Formatting, Badges & Footnotes
+
+Status badges: :badge[Stable]{success}, :badge[Beta]{warning}, :badge[Experimental]{danger}, and :badge[Info]{info}.
+
+Standard formatting supports *italics*, **bold**, ***bold italics***, ~~strikethrough~~, inline `code`, and footnotes[^1][^note].
+
+> Quoted text can span multiple lines.
+> You can also use **Markdown** and `inline code` inside a blockquote.
+
+[^1]: Standard numbered footnote rendered at the bottom of the page.
+[^note]: Named footnotes render with automatic numbering and anchor links.
+
+---
+
+## Callouts & Collapsible Details
+
+:::note
+This is a standard note callout.
+:::
+
+:::info[Custom Title]
+This is an info callout with a custom title.
+:::
+
+:::tip
+Use callouts to highlight helpful tips and shortcuts.
+:::
+
+:::success
+Operation completed without warnings or errors.
+:::
+
+:::warning[Heads Up]
+Double-check internal routes so `checkDeadlinks` passes during builds.
+:::
+
+:::danger[Breaking Change]
+Avoid importing local `.mdx` or `.ts` snippet files unless they exist in your project.
+:::
+
+:::callout[Generic Callout]
+A generic callout directive with custom heading text.
+:::
+
+:::details[Click to expand single details]
+Hidden content stays collapsed until clicked.
+:::
+
+::::details[Nested Details & Callout]
+Outer `::::` blocks can wrap inner `:::` directives when nested.
+
+:::tip[Nested Tip]
+Always use more colons on the outer fence than on any inner directive.
+:::
+::::
+
+---
+
+## AI Prompts
+
+:::prompt
+Read https://vocs.dev/introduction/getting-started and update `vocs.config.ts`.
+Requirements:
+- Preserve existing navigation
+- Run `pnpm build`
+- Replace <PROJECT_NAME> with your project name
+:::
+
+---
+
+## Step-by-Step Guide
+
+::::steps
+##### Create your MDX page
+Place your file inside `src/pages/` (for example, `src/pages/index.mdx`).
+
+##### Add directives and code groups
+Combine Markdown extensions, fenced code blocks, and JSX components.
+
+:::code-group
+```ts [pnpm]
+pnpm add vocs
