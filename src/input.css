@@ -148,9 +148,43 @@ layer(base);
 .tk-glow {
   box-shadow: 0 0 0 1px #22c55e66, 0 8px 30px -6px #22c55e80;
 }
-.tk-plus-glow {
-  box-shadow: 0 0 0 1px #a855f766, 0 8px 30px -6px #a855f780;
+.tk-basic-gradient {
+  background: linear-gradient(to bottom, #22c55e26, #101317 65%);
 }
+.tk-cloud-gradient {
+  background: linear-gradient(to bottom, #7dd3fc26, #101317 65%);
+}
+.tk-plan-grid { grid-auto-rows: 1fr; }
+.tk-plan-copy { min-height: 3rem; line-height: 1.5rem; }
+.tk-plan-copy span { display: block; }
+.tk-console-output { height: 6rem; overflow: hidden; }
+.tk-console-output p { white-space: nowrap; }
+.tk-console-line { animation: tk-console-line-in 220ms ease-out both; }
+.tk-console-cursor { animation-duration: 1s; }
+.tk-form-control {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--color-line);
+  border-radius: 0.5rem;
+  background-color: var(--color-ink);
+  padding: 0.625rem 0.75rem;
+  color: #fff;
+}
+.tk-form-control::placeholder { color: var(--color-mute); }
+.tk-form-control:focus-visible { outline: 2px solid var(--color-tinker); outline-offset: 2px; }
+.tk-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+[data-feature-request-submit]:disabled { cursor: not-allowed; opacity: 0.6; }
+@keyframes tk-console-line-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tk-console-line,
+  .tk-console-cursor { animation: none; }
+}
+.tk-cloud { color: #7dd3fc; }
+.tk-cloud-border { border-color: #7dd3fc66; }
+.tk-plus-border { border-color: #a855f766; }
 details.tk-faq > summary { list-style: none; }
 details.tk-faq > summary::-webkit-details-marker { display: none; }
 details.tk-faq[open] .tk-faq-icon { transform: rotate(45deg); }
@@ -170,6 +204,14 @@ details.tk-faq[open] .tk-faq-icon { transform: rotate(45deg); }
   -webkit-mask: var(--icon) center / contain no-repeat;
   mask: var(--icon) center / contain no-repeat;
 }
+.spacer {
+  height: 50px;
+  width: 50px;
+  /* Prevents Flexbox from squishing the spacer to 0px */
+  flex-shrink: 0; 
+}
+
+
 .i-add { --icon: url("/assets/images/icons/subframe/add.svg"); }
 .i-arrow-forward { --icon: url("/assets/images/icons/subframe/arrow-forward.svg"); }
 .i-check { --icon: url("/assets/images/icons/subframe/check.svg"); }
@@ -179,8 +221,11 @@ details.tk-faq[open] .tk-faq-icon { transform: rotate(45deg); }
 .i-download { --icon: url("/assets/images/icons/subframe/download.svg"); }
 .i-question-mark { --icon: url("assets/images/icons/subframe/download.svg"); }
 .i-beaker { --icon: url("assets/images/icons/subframe/beaker.svg"); }
+.i-lightning-fill { --icon: url("assets/images/icons/subframe/lightning-fill.svg"); }
 .i-window-with-text { --icon: url("assets/images/icons/subframe/window-with-text.svg"); }
 .i-plus-sparkle { --icon: url("assets/images/icons/subframe/plus-sparkle.svg"); }
+.i-tinker-cloud { --icon: url("/assets/images/icons/subframe/tinker-cloud.svg"); }
+.i-shopping-basket { --icon: url("/assets/images/icons/subframe/shopping-basket.svg"); }
 .i-modrinth { --icon: url("assets/images/icons/subframe/modrinth.svg"); }
 .i-mail { --icon: url("assets/images/icons/subframe/mail.svg"); }
 .i-team { --icon: url("assets/images/icons/subframe/team.svg"); }

@@ -1441,9 +1441,43 @@
 .tk-glow {
   box-shadow: 0 0 0 1px #22c55e66, 0 8px 30px -6px #22c55e80;
 }
-.tk-plus-glow {
-  box-shadow: 0 0 0 1px #a855f766, 0 8px 30px -6px #a855f780;
+.tk-basic-gradient {
+  background: linear-gradient(to bottom, #22c55e26, #101317 65%);
 }
+.tk-cloud-gradient {
+  background: linear-gradient(to bottom, #7dd3fc26, #101317 65%);
+}
+.tk-plan-grid { grid-auto-rows: 1fr; }
+.tk-plan-copy { min-height: 3rem; line-height: 1.5rem; }
+.tk-plan-copy span { display: block; }
+.tk-console-output { height: 6rem; overflow: hidden; }
+.tk-console-output p { white-space: nowrap; }
+.tk-console-line { animation: tk-console-line-in 220ms ease-out both; }
+.tk-console-cursor { animation-duration: 1s; }
+.tk-form-control {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--color-line);
+  border-radius: 0.5rem;
+  background-color: var(--color-ink);
+  padding: 0.625rem 0.75rem;
+  color: #fff;
+}
+.tk-form-control::placeholder { color: var(--color-mute); }
+.tk-form-control:focus-visible { outline: 2px solid var(--color-tinker); outline-offset: 2px; }
+.tk-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+[data-feature-request-submit]:disabled { cursor: not-allowed; opacity: 0.6; }
+@keyframes tk-console-line-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tk-console-line,
+  .tk-console-cursor { animation: none; }
+}
+.tk-cloud { color: #7dd3fc; }
+.tk-cloud-border { border-color: #7dd3fc66; }
+.tk-plus-border {border-color: #a855f766; }
 details.tk-faq > summary {
   list-style: none;
 }
@@ -1493,6 +1527,12 @@ details.tk-faq[open] .tk-faq-icon {
   .i-beaker {
     --icon: url("/assets/images/icons/subframe/beaker.svg");
   }
+  .i-lightning-fill {
+    --icon: url("/assets/images/icons/subframe/lightning-fill.svg");
+  }
+  .verticalLine {
+    border-left: medium solid #232830;
+  }
   .i-window-with-text {
     --icon: url("/assets/images/icons/subframe/window-with-text.svg");
   }
@@ -1504,6 +1544,12 @@ details.tk-faq[open] .tk-faq-icon {
   }
   .i-plus-sparkle {
     --icon: url("/assets/images/icons/subframe/plus-sparkle.svg");
+  }
+  .i-shopping-basket {
+    --icon: url("/assets/images/icons/subframe/shopping-basket.svg");
+  }
+  .i-tinker-cloud {
+    --icon: url("/assets/images/icons/subframe/tinker-cloud.svg");
   }
   .i-modrinth {
     --icon: url("/assets/images/icons/subframe/modrinth.svg");

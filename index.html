@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tinker Dash | Manage Your Minecraft Server</title>
+  <title>TinkerMC | Manage Your Minecraft Server</title>
   <meta name="description"
     content="Run Minecraft servers on your own hardware with Tinker Dash. Manage the live console, players, worlds and backups from a free desktop app." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -45,14 +45,15 @@
     <div class="mx-auto flex h-16 max-w-[1180px] items-center justify-between px-5">
       <a href="#top" class="flex items-center gap-2 text-xl font-extrabold tracking-tight">
         <img src="assets/images/tinker/wrench.png" alt="" class="h-6 w-6" />
-        Tinker
+        TinkerMC
       </a>
 
       <nav class="hidden items-center gap-8 text-sm font-medium text-mute md:flex">
-        <a href="#features" class="hover:text-white">Features</a>
-        <a href="#how" class="hover:text-white">How it works</a>
-        <a href="#plus" class="inline-flex items-center gap-1.5 hover:text-white">
-          <span class="tk-icon i-plus-sparkle text-base" aria-hidden="true"></span>Plus
+        <a href="#features" class="inline-flex items-center gap-1.5 hover:text-white">
+          <span class="tk-icon i-lightning-fill text-base" aria-hidden="true"></span>Features
+        </a>
+        <a href="#plans" class="inline-flex items-center gap-1.5 hover:text-white">
+          <span class="tk-icon i-plus-sparkle text-base" aria-hidden="true"></span>Plans
         </a>
         <a href="#team" class="inline-flex items-center gap-1.5 hover:text-white">
           <span class="tk-icon i-team text-base" aria-hidden="true"></span>Team
@@ -86,7 +87,7 @@
       data-menu>
       <a href="#features" class="block py-3 text-mute hover:text-white">Features</a>
       <a href="#how" class="block py-3 text-mute hover:text-white">How it works</a>
-      <a href="#plus" class="block py-3 text-mute hover:text-white">Plus</a>
+      <a href="#plans" class="block py-3 text-mute hover:text-white">Plans</a>
       <a href="#team" class="block py-3 text-mute hover:text-white">Team</a>
       <a href="#faq" class="block py-3 text-mute hover:text-white">FAQ</a>
       <a href="https://docs.tinkermc.com" data-docs-link class="flex items-center gap-2 py-3 text-mute hover:text-white">
@@ -113,8 +114,8 @@
           <span class="text-tinker">without the command line.</span>
         </h1>
         <p class="mx-auto mt-6 max-w-[620px] text-base leading-relaxed text-mute sm:text-lg">
-          Turn an old PC into a server box. Tinker Dash gives you a live console, player controls and world tools
-          in one app, so you never have to SSH in or edit config files by hand.
+          Self-host a Minecraft server in minutes with TinkerMC. TinkerMC supplies a suite of tools to make
+          managing your server extremely intuitive.
         </p>
 
         <div id="download"
@@ -126,6 +127,10 @@
           <a href="https://docs.tinkermc.com" data-docs-link
             class="inline-flex items-center justify-center gap-2 rounded-xl border border-line bg-ink-2 px-6 py-3.5 text-base font-semibold text-white transition hover:border-mute/50">
             <span class="tk-icon i-menu-book text-lg text-white" aria-hidden="true"></span>Docs
+          </a>
+          <a href="#try" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 rounded-xl border border-line bg-ink-2 px-6 py-3.5 text-base font-semibold text-white transition hover:border-mute/50">
+            <img src="assets/images/icons/subframe/round-play-arrow.svg" alt="" aria-hidden="true" class="h-5 w-5" />Try in Browser
           </a>
         </div>
 
@@ -178,14 +183,14 @@
               copy or download it. Re-run past commands and save your own one-click quick commands.
             </p>
             <div class="mt-6 overflow-x-auto rounded-xl border border-line bg-ink p-3 font-mono text-[11px] leading-5 sm:p-4 sm:text-[13px] sm:leading-6">
-              <p><span class="text-mute">[14:02:16]</span> <span class="text-tinker">[Server/INFO]</span> Done (12.4s)!
-                For help, type "help"</p>
-              <p><span class="text-mute">[14:05:42]</span> <span class="text-tinker">[Server/INFO]</span> CanBeGold
-                joined the game</p>
-              <p class="text-amber-300"><span class="text-mute">[14:12:37]</span> [Server/WARN] Can't keep up! Running
-                2034ms behind</p>
+              <div class="tk-console-output" data-console-output role="log" aria-live="off" aria-label="Sample Minecraft server console">
+                <p><span class="text-mute">[14:02:16]</span> <span class="text-tinker">[Server/INFO]</span> Starting Minecraft server on *:25565</p>
+                <p><span class="text-mute">[14:02:18]</span> <span class="text-tinker">[Server/INFO]</span> Preparing level "world"</p>
+                <p><span class="text-mute">[14:02:20]</span> <span class="text-tinker">[Server/INFO]</span> Done (4.2s)! For help, type "help"</p>
+                <p><span class="text-mute">[14:05:42]</span> <span class="text-tinker">[Server/INFO]</span> CanBeGold joined the game</p>
+              </div>
               <p class="mt-2 text-white"><span class="text-tinker">&gt;</span> save-all<span
-                  class="ml-0.5 inline-block h-4 w-2 translate-y-0.5 animate-pulse bg-tinker"></span></p>
+                  class="tk-console-cursor ml-0.5 inline-block h-4 w-2 translate-y-0.5 animate-pulse bg-tinker"></span></p>
             </div>
           </article>
 
@@ -195,7 +200,7 @@
               <span class="tk-icon i-people text-[22px]" aria-hidden="true"></span>
             </div>
             <h3 class="mt-5 text-xl font-bold">Players</h3>
-            <p class="mt-2 text-mute">See who's online. Kick, ban and unban, give operator, manage the whitelist, and
+            <p class="mt-2 text-mute">See who's online. Kick, ban, timeout, give operator, manage the whitelist, and
               keep private notes on each player.</p>
             <ul class="mt-6 space-y-2 text-sm">
               <li class="flex items-center justify-between rounded-lg border border-tinker/30 bg-tinker/5 px-3 py-2">
@@ -231,18 +236,16 @@
               pause and resume it and watch live progress.</p>
           </article>
 
-          <!-- Safe -->
+          <!-- Marketplace -->
           <article class="rounded-2xl border border-line bg-ink-2 p-5 sm:p-7">
             <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-tinker/15 text-tinker">
-              <span class="tk-icon i-save-all text-[22px]" aria-hidden="true"></span>
+              <span class="tk-icon i-shopping-basket text-[22px]" aria-hidden="true"></span>
             </div>
-            <h3 class="mt-5 text-xl font-bold">Never lose a world</h3>
-            <p class="mt-2 text-mute">Start, stop and restart in one click. Tinker warns you when players are online and
-              always saves before stopping, even when the server PC shuts down.</p>
+            <h3 class="mt-5 text-xl font-bold">Tinker Marketplace</h3>
+            <p class="mt-2 text-mute">Browse community worlds from Planet Minecraft and other creators, then bring them
+              straight into your server. Add a Build Battle arena, PvP map, or a new adventure in a few clicks.</p>
           </article>
         </div>
-
-        <p class="mt-6 text-sm text-mute">Next: Modrinth modpacks, a file editor and user roles.</p>
       </div>
     </section>
 
@@ -349,59 +352,78 @@
       </div>
     </section>
 
-    <!-- ====== Plus / pricing -->
-    <section id="plus" class="scroll-mt-16 py-16 sm:py-24">
+    <!-- ====== Pricing -->
+    <section id="plans" class="scroll-mt-16 py-16 sm:py-24">
       <div class="mx-auto max-w-[1180px] px-5">
         <div class="mx-auto max-w-[640px] text-center">
-          <h2 class="text-3xl font-extrabold tracking-tight sm:text-5xl">Free to run. Plus if you want more.</h2>
-          <p class="mt-4 text-base text-mute sm:text-lg">Everything above is free. Plus adds extras for running a server with
-            friends.</p>
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-5xl">Free to start. More when you need it.</h2>
+          <p class="mt-4 text-base text-mute sm:text-lg">Manage your server for free, unlock premium desktop features
+            with a one-time purchase, or add hosted services with Tinker Cloud.</p>
         </div>
 
-        <div class="mx-auto mt-10 grid max-w-[920px] gap-6 sm:mt-14 md:grid-cols-2">
-          <div class="rounded-2xl border border-line bg-ink-2 p-6 sm:p-8">
-            <h3 class="text-lg font-bold">Tinker Basic</h3>
-            <p class="mt-4"><span class="text-5xl font-extrabold">$0</span><span class="text-mute"> forever</span></p>
-            <ul class="mt-8 space-y-3 text-sm">
-              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base text-tinker" aria-hidden="true"></span>Tinker Dash and Tinker Agent</li>
-              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base text-tinker" aria-hidden="true"></span>Unlimited servers</li>
-              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base text-tinker" aria-hidden="true"></span>Live console, players and world tools</li>
-              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base text-tinker" aria-hidden="true"></span>Create and import servers</li>
-              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base text-tinker" aria-hidden="true"></span>Up to 10 smart backups</li>
-            </ul>
+        <div class="tk-plan-grid mx-auto mt-4 grid max-w-[1180px] gap-6 sm:mt-14 md:grid-cols-2 lg:grid-cols-3">
+          <article class="tk-basic-gradient flex flex-col rounded-2xl border border-tinker/30 p-6 sm:p-8 hover:glow">
+            <p class="mt-3"><span class="text-5xl font-extrabold">$0</span><span class="text-mute"> forever</span></p>
+            <h3 class="mt-3 flex items-center text-2xl font-bold">
+              <span class="text-xl" aria-hidden="true"></span>Tinker Basic
+            </h3>
+            <p class="tk-plan-copy mt-3 text-sm text-mute">
+              <span>Manage your server locally,</span>
+              <span>free forever.</span>
+            </p>
+            <ul class="mt-6 space-y-3 text-sm">
+              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base text-tinker" aria-hidden="true"></span>Modrinth shared instance</li>
+              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base text-tinker" aria-hidden="true"></span>Plus role in Discord</li>
+              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base text-tinker" aria-hidden="true"></span>Priority contact with team members, and Tinker Help AI</li>
+              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base text-tinker" aria-hidden="true"></span>Advanced server management options</li>
+              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base text-tinker" aria-hidden="true"></span>Premium interface customization</li>
+              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base text-tinker" aria-hidden="true"></span>Alerts and notifications for iOS/Android</li>
+              <li class="spacer"> </li>
+            </ul> 
             <a href="https://discord.gg/4uEMPGrCET" target="_blank" rel="noopener noreferrer"
-              class="mt-8 flex items-center justify-center gap-2 rounded-xl border border-[#0173D4] bg-gradient-to-b from-[#00c6ff] to-[#0072ff] py-3 text-center font-bold text-white shadow-[0_8px_24px_-6px_rgba(1,115,212,0.5)] transition"><span
+              class="mt-auto flex items-center justify-center gap-2 rounded-xl border border-[#0173D4] bg-gradient-to-b from-[#00c6ff] to-[#0072ff] py-3 text-center font-bold text-white shadow-[0_8px_24px_-6px_rgba(1,115,212,0.5)] transition"><span
                 class="tk-icon i-beaker" aria-hidden="true"></span>Apply for Beta</a>
-          </div>
+          </article>
 
-          <div class="tk-plus-glow relative rounded-2xl bg-gradient-to-b from-plus/15 to-ink-2 p-6 sm:p-8">
-            <span class="absolute top-6 right-6 rounded-full bg-plus/20 px-2.5 py-1 font-mono text-xs text-plus-soft">1
-              week free</span>
-            <h3 class="text-lg font-bold text-plus-soft">Tinker Plus</h3>
-            <p class="mt-4"><span class="text-5xl font-extrabold">$19.99</span><span class="text-mute"> perpetual license</span>
+          <article class="tk-plus-glow tk-plus-border flex flex-col rounded-2xl border bg-gradient-to-b from-plus/15 to-ink-2 p-6 sm:p-8">
+            <p class="mt-3"><span class="text-5xl font-extrabold">$19.99</span><span class="text-mute"> one time</span></p>
+            <h3 class="mt-3 flex items-center gap-2 text-2xl font-bold text-plus-soft">
+              <span class="tk-icon i-plus-sparkle text-xl" aria-hidden="true"></span>Tinker Plus
+            </h3>
+            <p class="tk-plan-copy mt-3 text-sm text-mute">
+              <span>Premium desktop features, beyond Free.</span>
+              <span>Pay once. Keep your version.</span>
             </p>
-            <ul class="mt-8 space-y-3 text-sm">
-              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base text-plus-soft" aria-hidden="true"></span><span><b>6 months of updates:</b> you keep Tinker, but lose cloud features and any new updates</span></li>
-              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base text-plus-soft" aria-hidden="true"></span><span><b>Connection Tunnel:</b> tinker from
-                  anywhere, securely</span></li>
-              <li class="flex gap-3"><span class="tk-icon i-share mt-0.5 text-base text-plus-soft" aria-hidden="true"></span><span><b>Shared public user:</b> give friends
-                  access with one link</span></li>
-              <li class="flex gap-3"><span class="tk-icon i-cloud-backup mt-0.5 text-base text-plus-soft" aria-hidden="true"></span><span><b>5 GB cloud backups</b> and unlimited
-                  smart backups</span></li>
-              <li class="flex gap-3"><span class="tk-icon i-modrinth mt-0.5 text-base text-plus-soft" aria-hidden="true"></span><span><b>Modrinth shared instance:</b> no more
-                .mrpack files</span></li>
-              <li class="flex gap-3">
-                <span class="tk-icon i-discord mt-0.5 text-base text-plus-soft" aria-hidden="true"></span>
-                <span>Plus role in our <a href="https://discord.gg/9G9H4HdtJx"
-                    class="text-blue-500 underline hover:text-blue-400">Discord</a></span>
-              </li>
+            <ul class="mt-6 space-y-3 text-sm">
+              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base text-plus-soft" aria-hidden="true"></span>Modrinth shared instance</li>
+              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base text-plus-soft" aria-hidden="true"></span>Plus role in Discord</li>
+              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base text-plus-soft" aria-hidden="true"></span>Priority contact with team members, and Tinker Help AI</li>
+              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base text-plus-soft" aria-hidden="true"></span>Advanced server management options</li>
+              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base text-plus-soft" aria-hidden="true"></span>Premium interface customization</li>
+              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base text-plus-soft" aria-hidden="true"></span>Alerts and notifications for iOS/Android</li>
             </ul>
-            <span
-              class="mt-8 block cursor-not-allowed rounded-xl border border-plus/40 py-3 text-center font-bold text-plus-soft">Coming
-              soon</span>
-            <p class="mt-3 text-center text-xs text-mute">Terms apply. Your servers keep working on the free plan.
+            <span class="mt-auto block rounded-xl border border-plus/40 py-3 text-center font-bold text-plus-soft">Coming soon</span>
+          </article>
+
+          <article class="tk-cloud-gradient tk-cloud-border flex flex-col rounded-2xl border p-6 sm:p-8">
+            <p class="mt-3"><span class="text-5xl font-extrabold">$5.99</span><span class="text-mute">/month</span></p>
+            <h3 class="mt-3 flex items-center gap-2 text-2xl font-bold tk-cloud">
+              <span class="tk-icon i-tinker-cloud text-xl" aria-hidden="true"></span>Tinker Cloud
+            </h3>
+            <p class="tk-plan-copy mt-3 text-sm text-mute">
+              <span>Useful cloud features, secured by us.</span>
+              <span>Monthly access requires Plus.</span>
             </p>
-          </div>
+            <ul class="mt-6 space-y-3 text-sm">
+              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base tk-cloud" aria-hidden="true"></span>Secure remote access through Tinker Cloud</li>
+              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base tk-cloud" aria-hidden="true"></span>Cloud backups and storage allowance</li>
+              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base tk-cloud" aria-hidden="true"></span>AI-powered console explanations</li>
+              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base tk-cloud" aria-hidden="true"></span>Cloud-based diagnostics</li>
+              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base tk-cloud" aria-hidden="true"></span>Remote file transfers</li>
+              <li class="flex gap-3"><span class="tk-icon i-check mt-0.5 text-base tk-cloud" aria-hidden="true"></span>Cloud usage dashboard</li>
+            </ul>
+            <span class="tk-cloud-border mt-auto block rounded-xl border py-3 text-center font-bold tk-cloud">Coming soon</span>
+          </article>
         </div>
       </div>
     </section>
@@ -420,6 +442,9 @@
             <a href="https://docs.tinkermc.com" data-docs-link
               class="inline-flex items-center gap-2 rounded-lg border border-line px-4 py-2.5 text-sm font-semibold transition hover:border-tinker hover:text-tinker"><span
                 class="tk-icon i-menu-book text-base" aria-hidden="true"></span>Docs</a>
+            <a href="#feature-request"
+              class="inline-flex items-center gap-2 rounded-lg border border-line px-4 py-2.5 text-sm font-semibold transition hover:border-tinker hover:text-tinker">
+              <span class="tk-icon i-plus-sparkle text-base" aria-hidden="true"></span>Request a feature</a>
           </div>
         </div>
 
@@ -449,8 +474,22 @@
           <details class="tk-faq py-5">
             <summary class="flex cursor-pointer items-center justify-between gap-6 text-base font-semibold sm:text-lg">Is Tinker
               free?<span class="tk-faq-icon text-2xl text-tinker transition-transform">+</span></summary>
-            <p class="mt-3 text-mute">Yes. Tinker Dash and Tinker Agent are free. Tinker Plus is an optional $4.99/month
-              upgrade with extras like the Connection Tunnel and cloud backups.</p>
+            <p class="mt-3 text-mute">Yes. Tinker Free is free forever and includes essential local server management.
+              Tinker Plus is a $19.99 one-time purchase for premium desktop features. Tinker Cloud is an optional
+              $5.99/month subscription and requires Tinker Plus.</p>
+          </details>
+          <details class="tk-faq py-5">
+            <summary class="flex cursor-pointer items-center justify-between gap-6 text-base font-semibold sm:text-lg">Is Tinker Plus a subscription?<span
+                class="tk-faq-icon text-2xl text-tinker transition-transform">+</span></summary>
+            <p class="mt-3 text-mute">No. Tinker Plus is a one-time $19.99 purchase, and you keep the version you
+              purchased indefinitely. Tinker Cloud is a separate optional monthly subscription for hosted services.</p>
+          </details>
+          <details class="tk-faq py-5">
+            <summary class="flex cursor-pointer items-center justify-between gap-6 text-base font-semibold sm:text-lg">What does Tinker Cloud include?<span
+                class="tk-faq-icon text-2xl text-tinker transition-transform">+</span></summary>
+            <p class="mt-3 text-mute">Tinker Cloud is $5.99/month and requires Tinker Plus. It includes secure remote
+              access, cloud backups and storage, AI-powered console explanations, cloud diagnostics, remote file
+              transfers and a cloud usage dashboard. The subscription is active while cloud services are used.</p>
           </details>
           <details class="tk-faq py-5">
             <summary class="flex cursor-pointer items-center justify-between gap-6 text-base font-semibold sm:text-lg">Can I move my
@@ -463,8 +502,9 @@
             <summary class="flex cursor-pointer items-center justify-between gap-6 text-base font-semibold sm:text-lg">How do I
               manage my server when I'm away from home?<span
                 class="tk-faq-icon text-2xl text-tinker transition-transform">+</span></summary>
-            <p class="mt-3 text-mute">Use Tailscale for free, or turn on the Connection Tunnel with Tinker Plus. Never
-              open the Agent's port (7122) to the internet.</p>
+            <p class="mt-3 text-mute">Use Tailscale for free, or use Tinker Cloud for secure remote access. Cloud
+              requires Tinker Plus and an active $5.99/month subscription. Never open the Agent's port (7122) to the
+              internet.</p>
           </details>
           <details class="tk-faq py-5">
             <summary class="flex cursor-pointer items-center justify-between gap-6 text-base font-semibold sm:text-lg">Are you
@@ -473,7 +513,59 @@
             <p class="mt-3 text-mute">No. Tinker is an independent project and isn't affiliated with or endorsed by
               Mojang or Microsoft.</p>
           </details>
+          
         </div>
+      </div>
+    </section>
+
+    <!-- ====== Feature request -->
+    <section id="feature-request" class="scroll-mt-16 border-t border-line py-16 sm:py-24">
+      <div class="mx-auto grid max-w-[1180px] gap-8 px-5 lg:grid-cols-[1fr_1.2fr] lg:gap-12">
+        <div>
+          <p class="font-mono text-sm text-tinker">// feature request</p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-5xl">Help shape Tinker.</h2>
+          <p class="mt-4 text-mute">Tell us what would make managing your server better. Share one idea at a time.</p>
+        </div>
+
+        <form class="rounded-2xl border border-line bg-ink-2 p-5 sm:p-7" data-feature-request-form>
+          <input type="hidden" name="formOpenedAt" data-form-opened-at />
+          <div class="space-y-5">
+            <div>
+              <label for="request-title" class="text-sm font-semibold">Feature title</label>
+              <input id="request-title" class="tk-form-control mt-2" name="title" type="text" minlength="4" maxlength="120"
+                required autocomplete="off" placeholder="What should Tinker be able to do?" />
+            </div>
+            <div>
+              <label for="request-description" class="text-sm font-semibold">Describe your idea</label>
+              <textarea id="request-description" class="tk-form-control mt-2" name="description" rows="5"
+                minlength="15" maxlength="2000" required
+                placeholder="What would this feature do, and how would it help you?"></textarea>
+            </div>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="request-name" class="text-sm font-semibold">Name <span class="font-normal text-mute">(optional)</span></label>
+                <input id="request-name" class="tk-form-control mt-2" name="name" type="text" maxlength="60"
+                  autocomplete="name" placeholder="How should we credit you?" />
+              </div>
+              <div>
+                <label for="request-contact" class="text-sm font-semibold">Contact <span class="font-normal text-mute">(optional)</span></label>
+                <input id="request-contact" class="tk-form-control mt-2" name="contact" type="text" maxlength="120"
+                  autocomplete="off" placeholder="Discord or email" />
+              </div>
+            </div>
+            <div class="tk-honeypot" aria-hidden="true">
+              <label for="request-website">Website</label>
+              <input id="request-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <button type="submit" data-feature-request-submit
+                class="inline-flex items-center justify-center gap-2 rounded-lg bg-tinker px-5 py-3 font-bold text-ink transition hover:bg-tinker-soft disabled:cursor-not-allowed disabled:opacity-60">
+                <span class="tk-icon i-send" aria-hidden="true"></span>Submit request
+              </button>
+              <p class="text-sm text-mute" data-feature-request-status role="status" aria-live="polite"></p>
+            </div>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -506,7 +598,7 @@
               class="mx-auto h-16 w-16 rounded-full border border-line bg-tinker/10 object-cover sm:h-20 sm:w-20" alt=""
               src="assets/images/team/joshpfp.webp">
             <h3 class="mt-4 text-base font-bold sm:mt-5 sm:text-lg">Josh</h3>
-            <p class="mt-1 mb-4 text-xs text-mute sm:text-sm">QA Lead • Community Manager</p>
+            <p class="mt-1 mb-4 text-xs text-mute sm:text-sm">QA Lead • Finances</p>
             <a href="mailto:washy@tinkermc.com"
               class="mt-auto inline-flex items-center gap-2 rounded-lg border border-line px-3 py-2 text-xs font-medium text-mute sm:text-sm transition hover:border-tinker hover:text-tinker focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tinker"
               aria-label="Contact Josh">
@@ -548,7 +640,7 @@
               class="mx-auto h-16 w-16 rounded-full border border-line bg-tinker/10 object-cover sm:h-20 sm:w-20" alt=""
               src="assets/images/team/ryanpfp.jpg">
             <h3 class="mt-4 text-base font-bold sm:mt-5 sm:text-lg">Ryan</h3>
-            <p class="mt-1 mb-4 text-xs text-mute sm:text-sm">Marketing • QA Tester</p>
+            <p class="mt-1 mb-4 text-xs text-mute sm:text-sm">Marketing • QA</p>
             <a href="mailto:ryan@tinkermc.com"
               class="mt-auto inline-flex items-center gap-2 rounded-lg border border-line px-3 py-2 text-xs font-medium text-mute sm:text-sm transition hover:border-tinker hover:text-tinker focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tinker"
               aria-label="Contact Ryan">
@@ -560,14 +652,14 @@
           <article class="flex flex-col items-center rounded-2xl border border-line bg-ink-2 p-4 text-center sm:p-5">
             <img
               class="mx-auto h-16 w-16 rounded-full border border-line bg-tinker/10 object-cover sm:h-20 sm:w-20" alt=""
-              src="assets/images/team/tommypfp.webp">
-            <h3 class="mt-4 text-base font-bold sm:mt-5 sm:text-lg">Tommy</h3>
-            <p class="mt-1 mb-4 text-xs text-mute sm:text-sm">Lead Documentation</p>
-            <a href="mailto:tommy@tinkermc.com"
+              src="assets/images/team/colepfp.jpg">
+            <h3 class="mt-4 text-base font-bold sm:mt-5 sm:text-lg">Cole</h3>
+            <p class="mt-1 mb-4 text-xs text-mute sm:text-sm">Lead Tester</p>
+            <a href="mailto:cole@tinkermc.com"
               class="mt-auto inline-flex items-center gap-2 rounded-lg border border-line px-3 py-2 text-xs font-medium text-mute sm:text-sm transition hover:border-tinker hover:text-tinker focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tinker"
-              aria-label="Contact Tommy">
+              aria-label="Contact Cole">
               <span class="tk-icon i-mail text-sm" aria-hidden="true"></span>
-              <span class="sm:hidden">Email</span><span class="hidden sm:inline">Contact Tommy</span>
+              <span class="sm:hidden">Email</span><span class="hidden sm:inline">Contact Cole</span>
             </a>
           </article>
         </div>
@@ -580,16 +672,21 @@
         class="mx-auto flex max-w-[1180px] flex-col gap-6 px-5 py-10 text-sm text-mute md:flex-row md:items-center md:justify-between">
         <div>
           <a href="#top" class="flex items-center gap-2 text-base font-extrabold text-white">
-            <img src="assets/images/tinker/wrench.png" alt="" class="h-5 w-5" />Tinker
+            <img src="assets/images/tinker/wrench.png" alt="" class="h-5 w-5" />TinkerMC
           </a>
         </div>
         <div class="flex flex-wrap gap-x-6 gap-y-3">
-          <a href="#features" class="hover:text-white">Features</a>
-          <a href="#plus" class="hover:text-white">Plus</a>
-          <a href="#team" class="hover:text-white">Team</a>
-          <a href="#faq" class="hover:text-white">FAQ</a>
+          <a href="#features" data-docs-link class="inline-flex items-center gap-1.5 hover:text-white"><span
+              class="tk-icon i-lightning-fill" aria-hidden="true"></span>Features</a>
+          <a href="#plans" class="inline-flex items-center gap-1.5 hover:text-white"><span
+              class="tk-icon i-plus-sparkle" aria-hidden="true"></span>Plans</a>
+          <a href="#team" class="inline-flex items-center gap-1.5 hover:text-white"><span
+              class="tk-icon i-people" aria-hidden="true"></span>Team</a>
+          <a href="#faq" class="inline-flex items-center gap-1.5 hover:text-white"><span
+              class="tk-icon i-question-mark" aria-hidden="true"></span>FAQ</a>
           <a href="https://docs.tinkermc.com" data-docs-link class="inline-flex items-center gap-1.5 hover:text-white"><span
-              class="tk-icon i-menu-book" aria-hidden="true"></span>Docs</a>
+              class="tk-icon data-docs-link i-menu-book" aria-hidden="true"></span>Docs</a>
+          <div class="verticalLine"></div>
           <a href="https://discord.gg/9G9H4HdtJx" target="_blank" rel="noopener noreferrer"
             class="inline-flex items-center gap-1.5 hover:text-white"><span class="tk-icon i-discord"
               aria-hidden="true"></span>Discord</a>
@@ -629,6 +726,156 @@
       if (["localhost", "127.0.0.1"].includes(location.hostname)) {
         document.querySelectorAll("[data-docs-link]").forEach((a) => {
           a.href = "http://localhost:5173" + new URL(a.href).pathname;
+        });
+      }
+
+      const consoleOutput = document.querySelector("[data-console-output]");
+      if (consoleOutput) {
+        // Add or edit entries here to change the animated sample log.
+        const consoleEntries = [
+          { time: "14:05:42", level: "INFO", message: "ECSV3 joined the game" },
+          { time: "14:06:13", level: "INFO", message: "gamertheo33 joined the game" },
+          { time: "14:06:48", level: "INFO", message: "JustPurple67 joined the game" },
+          { time: "14:07:02", level: "INFO", message: "CanBeGold: anyone online?" },
+          { time: "14:08:03", level: "WARN", message: "Can't keep up! Is the server overloaded?" },
+          { time: "14:08:29", level: "INFO", message: "Raptorclaw9 joined the game" },
+          { time: "14:09:10", level: "INFO", message: "Gracaliciouss joined the game" },
+          { time: "14:09:42", level: "INFO", message: "World backup started" },
+          { time: "14:10:15", level: "INFO", message: "Acogann joined the game" },
+          { time: "14:10:38", level: "INFO", message: "ECSV3 earned the advancement [Stone Age]" },
+          { time: "14:11:04", level: "INFO", message: "World backup completed" },
+          { time: "14:11:29", level: "INFO", message: "WaWa710: where is everyone?" },
+          { time: "14:12:03", level: "INFO", message: "Na_than24 joined the game" },
+          { time: "14:12:37", level: "INFO", message: "JRWashy14 joined the game" },
+          { time: "14:13:08", level: "WARN", message: "Player CanBeGold moved too quickly!" },
+          { time: "14:13:45", level: "INFO", message: "TomTomFX joined the game" },
+          { time: "14:14:02", level: "INFO", message: "JustPurple67: anyone ready for Build Battle?" },
+          { time: "14:14:31", level: "INFO", message: "Server TPS: 20.0" },
+          { time: "14:15:06", level: "INFO", message: "Raptorclaw9 earned the advancement [Getting an Upgrade]" },
+          { time: "14:15:42", level: "INFO", message: "Acogann: found a village!" },
+          { time: "14:16:19", level: "INFO", message: "gamertheo33 left the game" },
+          { time: "14:16:54", level: "WARN", message: "Low memory warning: 85% RAM usage" },
+          { time: "14:17:20", level: "INFO", message: "Gracaliciouss: anyone got spare diamonds?" },
+          { time: "14:17:48", level: "INFO", message: "CanBeGold earned the advancement [Monster Hunter]" },
+          { time: "14:18:13", level: "INFO", message: "Scheduled autosave started" },
+          { time: "14:18:46", level: "INFO", message: "Scheduled autosave completed" },
+          { time: "14:19:02", level: "INFO", message: "WaWa710 joined the game" },
+          { time: "14:19:39", level: "INFO", message: "JRWashy14: nice builds everyone" },
+          { time: "14:20:11", level: "WARN", message: "Can't keep up! Running 1200ms behind" },
+          { time: "14:20:47", level: "INFO", message: "Na_than24 left the game" },
+          { time: "14:21:08", level: "INFO", message: "Server TPS: 19.8" },
+          { time: "14:21:36", level: "INFO", message: "ECSV3: starting a survival world?" },
+          { time: "14:22:04", level: "INFO", message: "Acogann earned the advancement [Acquire Hardware]" },
+          { time: "14:22:41", level: "INFO", message: "TomTomFX joined the game" },
+          { time: "14:23:16", level: "ERROR", message: "Failed to load chunk at [124, -38]" },
+          { time: "14:23:49", level: "INFO", message: "Chunk successfully regenerated" },
+          { time: "14:24:10", level: "INFO", message: "Raptorclaw9: server seems laggy" },
+          { time: "14:24:44", level: "INFO", message: "CanBeGold left the game" },
+          { time: "14:25:03", level: "INFO", message: "World border initialized at 10000 blocks" },
+          { time: "14:25:38", level: "WARN", message: "Player TomTomFX experienced connection timeout" },
+          { time: "14:26:12", level: "INFO", message: "TomTomFX rejoined the game" },
+          { time: "14:26:49", level: "INFO", message: "Gracaliciouss: anyone want to go mining?" },
+          { time: "14:27:21", level: "INFO", message: "JustPurple67 left the game" },
+          { time: "14:27:55", level: "INFO", message: "Server TPS: 20.0" },
+          { time: "14:28:19", level: "INFO", message: "Daily rewards refreshed" },
+          { time: "14:28:20", level: "INFO", message: "do people actually read these?" },
+          { time: "14:28:53", level: "INFO", message: "CanBeGold joined the game" },
+          { time: "14:29:26", level: "INFO", message: "CanBeGold: back already" },
+          { time: "14:30:02", level: "WARN", message: "Too many entities in chunk [82, 19]" },
+          { time: "14:30:41", level: "INFO", message: "Entity cleanup completed: 42 entities removed" },
+          { time: "14:31:08", level: "INFO", message: "JRWashy14 earned the advancement [Sweet Dreams]" },
+          { time: "14:31:44", level: "INFO", message: "WaWa710 joined the game" },
+          { time: "14:32:17", level: "INFO", message: "ECSV3: meet at spawn" },
+          { time: "14:32:53", level: "ERROR", message: "Plugin EconomyPlus failed to respond" },
+          { time: "14:33:29", level: "INFO", message: "Plugin EconomyPlus successfully reloaded" },
+          { time: "14:34:01", level: "INFO", message: "Server TPS: 19.9" },
+          { time: "14:34:38", level: "INFO", message: "Na_than24 joined the game" },
+          { time: "14:35:12", level: "INFO", message: "Acogann: someone took my crafting table" },
+          { time: "14:35:49", level: "WARN", message: "Unusual packet received from player Raptorclaw9" },
+          { time: "14:36:23", level: "INFO", message: "CanBeGold earned the advancement [Diamonds!]" },
+          { time: "14:36:57", level: "INFO", message: "World backup started" },
+          { time: "14:37:31", level: "INFO", message: "World backup completed successfully" },
+          { time: "14:38:04", level: "INFO", message: "TomTomFX: build battle starts in 5 minutes" },
+          { time: "14:38:42", level: "INFO", message: "gamertheo33 joined the game" },
+          { time: "14:39:15", level: "INFO", message: "CanBeGold: finally got full diamond" },
+          { time: "14:39:49", level: "WARN", message: "Server memory usage above 90%" },
+          { time: "14:40:23", level: "INFO", message: "Garbage collection completed" },
+          { time: "14:40:58", level: "INFO", message: "Gracaliciouss left the game" },
+          { time: "14:41:34", level: "INFO", message: "Server TPS: 20.0" },
+          { time: "14:41:35", level: "INFO", message: "hola" },
+          { time: "14:42:09", level: "INFO", message: "Build Battle event initialized" },
+          { time: "14:42:45", level: "INFO", message: "Build Battle arena loaded successfully" },
+          { time: "14:43:18", level: "INFO", message: "10 players teleported to Build Battle arena" },
+          { time: "14:43:52", level: "INFO", message: "Build Battle begins in 60 seconds" },
+          { time: "14:44:27", level: "INFO", message: "Build Battle theme selected: Medieval Castle" },
+          { time: "14:45:03", level: "INFO", message: "Build Battle timer started: 10 minutes" },
+          { time: "14:45:39", level: "WARN", message: "Player WaWa710 disconnected unexpectedly" },
+          { time: "14:46:14", level: "INFO", message: "WaWa710 reconnected to the server" },
+          { time: "14:46:50", level: "INFO", message: "All players successfully loaded into arena" },
+          { time: "14:47:25", level: "INFO", message: "Server autosave completed" }
+        ];
+        const visibleLines = 4;
+        const makeConsoleLine = ({ time, level, message }) => {
+          const line = document.createElement("p");
+          line.className = `tk-console-line${level === "WARN" ? " text-amber-300" : ""}`;
+          const timestamp = document.createElement("span");
+          timestamp.className = "text-mute";
+          timestamp.textContent = `[${time}] `;
+          const source = document.createElement("span");
+          source.className = level === "WARN" ? "" : "text-tinker";
+          source.textContent = `[Server/${level}] `;
+          line.append(timestamp, source, document.createTextNode(message));
+          return line;
+        };
+
+        consoleOutput.replaceChildren(...consoleEntries.slice(0, visibleLines).map(makeConsoleLine));
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          let nextEntry = visibleLines;
+          window.setInterval(() => {
+            consoleOutput.appendChild(makeConsoleLine(consoleEntries[nextEntry]));
+            if (consoleOutput.children.length > visibleLines) consoleOutput.firstElementChild.remove();
+            nextEntry = (nextEntry + 1) % consoleEntries.length;
+          }, 1800);
+        }
+      }
+
+      const featureRequestForm = document.querySelector("[data-feature-request-form]");
+      if (featureRequestForm) {
+        const formOpenedAt = featureRequestForm.elements.formOpenedAt;
+        const submitButton = featureRequestForm.querySelector("[data-feature-request-submit]");
+        const status = featureRequestForm.querySelector("[data-feature-request-status]");
+        formOpenedAt.value = String(Date.now());
+
+        featureRequestForm.addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const formData = new FormData(featureRequestForm);
+          if (Date.now() - Number(formOpenedAt.value) < 2500) {
+            status.textContent = "Please wait a moment before submitting.";
+            return;
+          }
+
+          submitButton.disabled = true;
+          status.textContent = "Submitting your request...";
+          try {
+            const response = await fetch("https://feature-request-api.canbegold.workers.dev/api/feature-request", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(Object.fromEntries(formData.entries())),
+            });
+            if (!response.ok) {
+              status.textContent = `Couldn't submit your request (HTTP ${response.status}). Please try again.`;
+              return;
+            }
+
+            featureRequestForm.reset();
+            formOpenedAt.value = String(Date.now());
+            status.textContent = "Thanks! Your feature request was submitted.";
+          } catch (error) {
+            console.error("Feature request submission failed.", error);
+            status.textContent = "Couldn't reach the feature request service. Check your connection and try again.";
+          } finally {
+            submitButton.disabled = false;
+          }
         });
       }
 
